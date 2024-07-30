@@ -197,7 +197,7 @@ function Resume() {
   let resume: Array<Role> = [
     {
       company: 'AE',
-      title: 'Full Stack & Data Engineer',
+      title: 'Full-stack & Data Engineer',
       logo: logoAe,
       start: 'Sep 2023',
       end: {
@@ -302,7 +302,7 @@ export default async function Home() {
             Hello there!
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm a computer science engineer with an interest in various fields, including full stack development, data engineering and data science.<br /><br />
+            I'm a computer science engineer with an interest in various fields, including data engineering, data science and full-stack development.<br /><br />
             I use this blog to document my experiences and insights from various projects to deepen my understanding and create a valuable reference for the future. Additionally, I hope to assist others who encounter similar challenges by sharing what I learn along the way.
           </p>
           <div className="mt-6 flex gap-6">

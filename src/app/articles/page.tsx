@@ -6,7 +6,7 @@ import Articles from './_components/Articles'
 export const metadata: Metadata = {
   title: 'Articles',
   description:
-    'All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order.',
+    'All of my long-form thoughts on data engineering, data science, full-stack development, and more, collected in chronological order.',
 }
 
 export default async function ArticlesIndex() {
@@ -15,7 +15,7 @@ export default async function ArticlesIndex() {
   return (
     <SimpleLayout
       title="Writing on software design, company building, and the aerospace industry."
-      intro="All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order."
+      intro="All of my long-form thoughts on data engineering, data science, full-stack development, and more, collected in chronological order."
     >
       <Articles articles={articles}/>
     </SimpleLayout>
