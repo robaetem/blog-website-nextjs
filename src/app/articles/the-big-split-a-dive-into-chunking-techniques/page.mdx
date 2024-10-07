@@ -1,0 +1,42 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import { ImageWithDesc } from "@/components/ImageWithDesc"
+
+export const article = {
+    author: 'Robin Baeteman',
+    date: '2024-10-07',
+    title: 'The Big Split: A Dive into Chunking Techniques',
+    description: 'In this article, we explore the world of chunking and dividing our documents into manageable chunks.',
+    topic: 'NLP'
+}
+
+export const metadata = {
+    title: article.title,
+    description: article.description
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+Breaking up large files into smaller pieces is really important for making RAG pipelines work better. The goal is to give the model just the right amount of information it needs for each task, without overloading it.
+When creating a RAG pipeline, one of the first and most important things to figure out is how to split up the data in the best way. This decision can make a big difference in how well the system performs.
+
+There are different ways to do chunking. Some of which are discussed below:
+1. Fixed Size Chunking
+2. Recursive Chunking
+3. Document Based Chunking
+4. Semantic Chunking
+5. Agentic Chunking
+
+## 1. Fixed Size Chunking
+Fixed size chunking involves splitting the text into chunks of a predetermined size, typically defined by a fixed number of characters or tokens. This method is straightforward and easy to implement but may not always preserve semantic coherence, as it does not consider the content's meaning or structure.
+
+## 2. Recursive Chunking
+Recursive chunking uses a hierarchical approach to split text. It applies multiple separators (e.g., periods, semicolons) recursively until the chunks are small enough. This method allows for more flexibility in defining chunk boundaries based on content structure, potentially leading to more meaningful segments.
+
+## 3. Document based chunking
+Document-based chunking involves dividing documents based on their inherent structure, such as paragraphs or sections. This approach helps maintain the contextual integrity of the content, as it respects natural boundaries within the document.
+
+## 4. Semantic Chunking
+Semantic chunking groups related ideas or concepts together into a single chunk. This method aims to preserve semantic coherence by ensuring that each chunk contains information that is contextually related, which can enhance the relevance and accuracy of retrieval.
+
+## 5. Agentic Chunking
+Agentic chunking is an experimental method that mimics human-like reasoning to determine chunk boundaries dynamically. It processes documents in a way that reflects logical content organization, making decisions about where to split based on the document's flow and meaning. This approach is still in development and can be computationally intensive.
